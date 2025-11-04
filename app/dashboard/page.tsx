@@ -7,6 +7,8 @@ import { useWeb3 } from "@/context/web3-context"
 import { getProvider } from "@/lib/web3-utils"
 import { getAllStoredHashes, getTotalHashCount } from "@/lib/blockchain-service"
 import HistoryTimeline from "@/components/history-timeline"
+import EvidenceMap from "@/components/evidence-map"
+
 
 interface HashEntry {
   evidenceId: string
@@ -204,6 +206,11 @@ export default function DashboardPage() {
       <div className="mt-10">
         <HistoryTimeline />
       </div>
+
+      <div className="mt-10">
+  <EvidenceMap />
+</div>
+
 
       <Footer />
     </main>

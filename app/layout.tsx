@@ -7,6 +7,7 @@ import { Web3Provider } from "@/context/web3-context"
 import { BlockchainProvider } from "@/context/blockchain-context"
 import { ToastProvider } from "@/components/toast-provider"
 import ToastDisplay from "@/components/toast-display"
+import "leaflet/dist/leaflet.css";
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
