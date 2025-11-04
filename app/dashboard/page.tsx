@@ -6,6 +6,7 @@ import Footer from "@/components/footer"
 import { useWeb3 } from "@/context/web3-context"
 import { getProvider } from "@/lib/web3-utils"
 import { getAllStoredHashes, getTotalHashCount } from "@/lib/blockchain-service"
+import HistoryTimeline from "@/components/history-timeline"
 
 interface HashEntry {
   evidenceId: string
@@ -199,6 +200,10 @@ export default function DashboardPage() {
           </div>
         </div>
       </section>
+      {/* Chain-of-Custody Timeline */}
+      <div className="mt-10">
+        <HistoryTimeline />
+      </div>
 
       <Footer />
     </main>
