@@ -7,7 +7,12 @@ import { useWeb3 } from "@/context/web3-context"
 import { getProvider } from "@/lib/web3-utils"
 import { getAllStoredHashes, getTotalHashCount } from "@/lib/blockchain-service"
 import HistoryTimeline from "@/components/history-timeline"
-import EvidenceMap from "@/components/evidence-map"
+import dynamic from "next/dynamic";
+
+const EvidenceMap = dynamic(() => import("@/components/evidence-map"), {
+  ssr: false,
+});
+
 
 
 interface HashEntry {
