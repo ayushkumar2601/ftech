@@ -1,13 +1,9 @@
 "use client";
 
+import "@/components/leaflet-fix";
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
-
-const markerIcon = new L.Icon({
-  iconUrl: "https://cdn-icons-png.flaticon.com/512/854/854895.png",
-  iconSize: [32, 32],
-});
+import type { LatLngExpression } from "leaflet";
 
 interface CaptureRecord {
   id: string;
@@ -40,34 +36,38 @@ export default function EvidenceMap() {
     );
   }
 
+  const mapCenter: LatLngExpression = [
+    validLocations[0].location!.lat,
+    validLocations[0].location!.lng,
+  ];
+
   return (
-    <div className="glass-effect p-6 border border-border rounded-xl">
+    <div className="glass-effect p-6 border border-border rounded-xl mt-8">
       <h2 className="text-xl font-semibold mb-4">Evidence Capture Locations</h2>
 
       <MapContainer
-        center={[validLocations[0].location!.lat, validLocations[0].location!.lng]}
-        zoom={12}
-        scrollWheelZoom={false}
+        center={mapCenter}
+        zoom={14}
+        scrollWheelZoom={true}
         className="w-full h-[400px] rounded-lg overflow-hidden"
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        {validLocations.map((rec) => (
-          <Marker
-            key={rec.id}
-            position={[rec.location!.lat, rec.location!.lng]}
-            icon={markerIcon}
-          >
-            <Popup>
-              <div className="text-sm">
-                <p><strong>Status:</strong> {rec.matchStatus}</p>
-                <p><strong>Device:</strong> {rec.device}</p>
-                <p><strong>Time:</strong> {new Date(rec.capturedAt).toLocaleString()}</p>
-                <img src={rec.dataUrl} className="mt-2 w-32 rounded" />
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        {validLocations.map((rec) => {
+          const pos: LatLngExpression = [rec.location!.lat, rec.location!.lng];
+          return (
+            <Marker key={rec.id} position={pos}>
+              <Popup>
+                <div className="text-sm">
+                  <p><strong>Status:</strong> {rec.matchStatus}</p>
+                  <p><strong>Device:</strong> {rec.device}</p>
+                  <p><strong>Time:</strong> {new Date(rec.capturedAt).toLocaleString()}</p>
+                  <img src={rec.dataUrl} className="mt-2 w-32 rounded" />
+                </div>
+              </Popup>
+            </Marker>
+          );
+        })}
       </MapContainer>
     </div>
   );
