@@ -31,9 +31,6 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo with Link to Home */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center glow-effect transition-transform hover:scale-110">
-            <span className="text-accent-foreground font-bold text-sm">⛓</span>
-          </div>
           <span className="font-bold text-lg text-foreground">ForeChain</span>
         </Link>
 
