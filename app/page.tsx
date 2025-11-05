@@ -5,10 +5,22 @@ import UploadCard from "@/components/upload-card"
 import VerificationCard from "@/components/verification-card"
 import Footer from "@/components/footer"
 import CameraCapture from "@/components/CameraCapture"
+import ClickSpark from '@/components/ClickSpark';
+import VerificationFlow from "@/components/VerificationFlow"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
+      <div className="z-100">
+  <ClickSpark
+    sparkColor="#fff"
+    sparkSize={10}
+    sparkRadius={15}
+    sparkCount={8}
+    duration={400}
+  >
+  
+
       <Header />
       <Hero />
       <Features />
@@ -33,8 +45,11 @@ export default function Home() {
         </div>
         
       </section>
+      <VerificationFlow/>
 
       <Footer />
+      </ClickSpark>
+</div>
     </main>
   )
 }

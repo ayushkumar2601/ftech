@@ -9,9 +9,6 @@ export default function Footer() {
           {/* Brand */}
           <div className="animate-fade-in-up">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center glow-effect">
-                <span className="text-accent-foreground font-bold text-sm">⛓</span>
-              </div>
               <span className="font-bold text-foreground">ForeChain</span>
             </div>
             <p className="text-muted-foreground text-sm">Blockchain-powered forensic investigation platform</p>

@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-primary/3 dark:from-accent/10 dark:via-transparent dark:to-primary/5 pointer-events-none" />
 
       {/* Grid background effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(100,150,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,150,255,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(79,235,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(79,235,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(100,150,255,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(100,150,255,0.15)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(79,235,255,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(79,235,255,0.15)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Badge with animation */}
