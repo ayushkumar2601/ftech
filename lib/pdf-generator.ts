@@ -517,8 +517,9 @@ export async function generateEvidencePDF({
   const doc = new jsPDF();
 
   // ✅ QR Code Link
-  const verifyUrl = `https://forentech-omega.vercel.app/verify?hash=${localHash}`;
-  const qrDataUrl = await QRCode.toDataURL(verifyUrl);
+// ✅ QR Code Link (Now redirects to Dashboard instead of Verify Page)
+const verifyUrl = `http://172.16.49.247:3000`;
+const qrDataUrl = await QRCode.toDataURL(verifyUrl);
 
   // ✅ Map Image (if GPS available)
   let mapDataUrl: string | null = null;
