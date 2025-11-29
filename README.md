@@ -50,7 +50,7 @@ This ensures **Proof of Authenticity, Proof of Time, Proof of Location, and Proo
 ## 🛠️ Tech Stack
 
 | Layer | Technologies |
-|------|--------------|
+|------|---------------|
 | Frontend | Next.js (App Router), React, Tailwind CSS |
 | Blockchain | Solidity / EVM Compatible Chain |
 | Storage | Local Storage / Optional IPFS |
