@@ -8,7 +8,7 @@ This ensures **Proof of Authenticity, Proof of Time, Proof of Location, and Proo
 
 ## 🚀 Features
 
-| Feature | Description |
+| Feature | Description | 
 |--------|-------------|
 | **Document Hashing (SHA-256)** | Generates unique fingerprint for every file |
 | **Blockchain Verification** | Stores and verifies document integrity on-chain |
